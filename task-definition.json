@@ -1,0 +1,21 @@
+{
+    "taskRoleArn": "arn:aws:iam::080266302756:role/ecs-task-role",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "executionRoleArn": "arn:aws:iam::080266302756:role/ecsTaskExecutionRole",
+    "memory": ".5 gb",
+    "cpu": ".25 vcpu",
+    "containerDefinitions": [
+        {
+            "name": "nginx-container",
+            "image": "nginx",
+            "essential": true,
+            "linuxParameters": {
+                "initProcessEnabled": true
+            }
+        }
+    ],
+    "family": "ecs-exec-task"
+}
