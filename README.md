@@ -8,6 +8,16 @@ aws ecs update-service --service ecs-service --enable-execute-command --cluster 
 aws ecs list-tasks --cluster default --service-name service-name
 ```
 
+## describe the task to check whether the enable command work or not
+
+```
+
+aws ecs describe-tasks \
+    --cluster ecs-fargate \
+    --tasks task-id
+    
+```
+
 ## interact with the container 
 
 ```
